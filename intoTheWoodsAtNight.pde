@@ -8,7 +8,7 @@ PGraphics canvas;
 PImage vid;
 PImage coyote;
 int t; // Timer
-int transition = 50000; // Time interval for the transition
+int transition = 20000; // Time interval for the transition
 int alt; // Alternating Timer
 
 void settings() {
@@ -42,7 +42,7 @@ void draw() {
         t = millis() + transition;
         alt++;
       }
-      if(alt % 10 == 0 ){ // 1 in 10 chance of Coyote encounter...
+      if(alt % 9 == 0 ){ // 1 in 9 chance of Coyote encounter...
         vid.set(0, 0, coyote);
         alt++;
       }else if(alt % 2 == 0){ // Effect Number 1
